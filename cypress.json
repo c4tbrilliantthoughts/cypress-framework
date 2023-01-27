@@ -1,0 +1,7 @@
+{
+  "baseUrl": "https://sparsh.senecaglobal.in",
+  "experimentalSessionSupport": true,
+  "experimentalStudio": true,
+  "testFiles": "**/*.feature",
+  "projectId": "ejcuif"
+}

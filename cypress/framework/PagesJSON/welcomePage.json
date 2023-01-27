@@ -1,0 +1,6 @@
+{
+    "pageTitleLocator": "head > title",
+    "userProfileLocator": ".ngx-dropdown-toggle",
+    "logoutLocator": "li > .profile-title > .logout-button",
+    "navigationMenuLocator": "ngx-nav-menu > div > a#home"
+}

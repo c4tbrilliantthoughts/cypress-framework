@@ -1,0 +1,40 @@
+{
+  "name": "sparsh",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:api": "cypress open --config-file ./cypress/config/apiTestingConfig.json",
+    "cy:functional": "cypress open --config-file ./cypress/config/functionalTestingConfig.json",
+    "cy:run-headless": "cypress run --headless --env userId=naresh.gopishetty@senecaglobal.com,password= --browser chrome --spec 'cypress/integration/FunctionalTestSuite/*ENV*.js'",
+    "cy:clean-reports": "if exist cypress\\reports rmdir /s/q cypress\\reports",
+    "cy:clean-snapshots": "if exist cypress\\screenshots rmdir /s/q cypress\\screenshots",
+    "cy:clean-videos": "if exist cypress\\videos rmdir /s/q cypress\\videos",
+    "cy:pretest": "npm run cy:clean-reports && npm run cy:clean-snapshots && npm run cy:clean-videos",
+    "cy:posttest": "node cucumber-html-report.js",
+    "cy:run": "cypress run --record --key f53e5063-660f-4e69-b6a2-48051ef01efd",
+    "cy:scripts": "npm run cy:pretest && npm run cy:run || npm run cy:posttest",
+    "cy:open": "cypress open"
+  },
+  "keywords": [],
+  "author": "NareshRaj",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.1.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
+    "multiple-cucumber-html-reporter": "^1.18.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "dependencies": {
+    "eslint": "^8.4.1"
+  }
+}

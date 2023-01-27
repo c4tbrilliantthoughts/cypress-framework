@@ -1,0 +1,9 @@
+{
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "baseUrl": "https://sparsh.senecaglobal.in",
+  "experimentalSessionSupport": true,
+  "testFiles": "**/*.feature",
+  "chromeWebSecurity": false,
+  "integrationFolder": "cypress/integration/FunctionalTestSuite"
+}
+

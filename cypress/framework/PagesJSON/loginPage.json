@@ -1,0 +1,8 @@
+{
+    "usernameInputLocator": "input[name=email]",
+    "passwordInputLocator": "",
+    "loginButtonLocator": "",
+    "enterSequence": "{enter}",
+    "loginErrorTextLocator": ".login-error",
+    "welcomePageTextLocator": ".box h1"
+}
